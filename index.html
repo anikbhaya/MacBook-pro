@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macbook Pro Product</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+    <section class="container-lg p-4">
+        <div class="row">
+            <div class="col">
+                <img src="images/mac.png" alt="" class="img-fluid">
+            </div>
+            <div class="col" id="productDetails">
+                <h2>Customize your Blue 24-inch iMac with Apple M1 chip.</h2>
+                <p>
+                    iMac M1 chip has always been about its best-in-class display. The new iMac features an expansive 24-inch 4.5K Retina display2 with narrower borders and 11.3 million pixels. With a P3 wide color gamut and over a billion colors, plus 500 nits of brightness, images are vivid and more brilliant.
+                </p>
+                <!-- // Specification -->
+                <div id="specification">
+
+                    <!-- Memory Specification -->
+                    <div class="memory my-4">
+                        <h6 class=fw-bold>Memory</h6>
+                        <div class="d-flex">
+                            <input type="radio" class="btn-check" name="memoryOptions" id="memory8gb" autocomplete="off" checked>
+                            <label class="btn btn-outline-dark mx-1" for="memory8gb">8GB unified memory</label>
+                            <input type="radio" class="btn-check" name="memoryOptions" id="memory16gb" autocomplete="off" >
+                            <label class="btn btn-outline-dark mx-1" for="memory16gb">16GB unified memory</label>
+                        </div>
+                    </div>
+
+                    <!-- Storage Specification -->
+                    <div class="storage my-4">
+                        <h6 class=fw-bold>Storage</h6>
+                        <div class="d-flex">
+                            <input type="radio" class="btn-check" name="storageOptions" id="storage256gb" autocomplete="off" checked>
+                            <label class="btn btn-outline-dark mx-1" for="storage256gb">256GB SSD Storage</label>
+                            <input type="radio" class="btn-check" name="storageOptions" id="storage512gb" autocomplete="off" >
+                            <label class="btn btn-outline-dark mx-1" for="storage512gb">512GB SSD Storage</label>
+                            <input type="radio" class="btn-check" name="storageOptions" id="storage1tb" autocomplete="off" >
+                            <label class="btn btn-outline-dark mx-1" for="storage1tb">1TB SSD Storage</label>
+                        </div>
+                    </div>
+
+                    <!-- Delivery Option  -->
+                    <div class="deliveryOption my-4">
+                        <h6 class=fw-bold>Choose your delivery option</h6>
+                        <div class="d-flex">
+                            <input type="radio" class="btn-check" name="deliveryOption" id="normalDelivery" autocomplete="off" checked>
+                            <label class="btn btn-outline-dark mx-1" for="normalDelivery">Friday, Aug 25 FREE Prime Delivery</label>
+                            <input type="radio" class="btn-check" name="deliveryOption" id="fastDelivery" autocomplete="off" >
+                            <label class="btn btn-outline-dark mx-1" for="fastDelivery">Friday, Aug 21 Delivery change $20</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Price Calculation -->
+                <div class="calculation my-2 col-lg-6">
+                    <table class="table">
+                        <tbody>
+                          <tr>
+                            <td><h6 class="fw-bold">Best Price</h6></td>
+                            <td class="text-end"><h6 class="fw-bold">$<span id="basePrice">1299</span></h6></td>
+                          </tr>
+                          <tr>
+                            <td><h6 class="fw-bold">Extra Memory Cost</h6></td>
+                            <td class="text-end"><h6 class="fw-bold">$<span id="memoryCost">0</span></h6></td>
+                          </tr>
+                          <tr>
+                            <td><h6 class="fw-bold">Extra Storage Cost</h6></td>
+                            <td class="text-end"><h6 class="fw-bold">$<span id="storageCost">0</span></h6></td>
+                          </tr>
+                          <tr class="border-bottom border-dark">
+                            <td><h6 class="fw-bold">Delivery Charge</h6></td>
+                            <td class="text-end"><h6 class="fw-bold">$<span id="deliveryCharge">0</span></h6></td>
+                          </tr>
+                          <tr>
+                            <td><h6 class="fw-bold">Total Price</h6></td>
+                            <td class="text-end"><h6 class="fw-bold">$<span id="productTotalPrice">0</span></h6></td>
+                          </tr>
+
+                          <!-- Promo Code Discount Amount -->
+                          <tr class="d-none" id="promoCodeSection">
+                            <td><h6 class="fw-bold">Promo Code Discount (20%)</h6></td>
+                            <td class="text-end"><h6 class="fw-bold">-$<span id="promoCodeDiscount">0</span> </h6></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+
+                <!-- Apply Promo Code -->
+                <div class="promoCode col-lg-6">
+                    <h6>Add Promo Code</h6>
+                    <div class="input-group">
+                        <input type="text" value="" id="promoCode" class="form-control">
+                        <input class="btn btn-danger" type="submit" name="" id="applyPromoCode" class="form-control" value="Apply">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <hr class="my-2">
+
+        <!-- Total Price After Discount -->
+            <div class="text-center">
+                <p class="fs-2 fw-bold mb-0">Total: $<span id="totalPrice">0</span></p>
+                <p id="discountNotifyText" class="d-none">(Price After Discount)</p>
+            </div>
+        
+        
+    </section>
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
