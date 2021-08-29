@@ -11,11 +11,11 @@
 <body>
     <section class="container-lg p-4">
         <div class="row">
-            <div class="col">
+            <div class="col-12 col-lg-6">
                 <img src="images/mac.png" alt="" class="img-fluid">
             </div>
             <div class="col" id="productDetails">
-                <h2>Customize your Blue 24-inch iMac with Apple M1 chip.</h2>
+                <h2 class="mt-3 mt-lg-0">Customize your Blue 24-inch iMac with Apple M1 chip.</h2>
                 <p>
                     iMac M1 chip has always been about its best-in-class display. The new iMac features an expansive 24-inch 4.5K Retina display2 with narrower borders and 11.3 million pixels. With a P3 wide color gamut and over a billion colors, plus 500 nits of brightness, images are vivid and more brilliant.
                 </p>
@@ -26,7 +26,7 @@
                     <div class="memory my-4">
                         <h6 class=fw-bold>Memory</h6>
                         <div class="d-flex">
-                            <input type="radio" class="btn-check" name="memoryOptions" id="memory8gb" autocomplete="off" checked>
+                            <input type="radio" class="btn-check" name="memoryOptions" id="memory8gb" autocomplete="off" >
                             <label class="btn btn-outline-dark mx-1" for="memory8gb">8GB unified memory</label>
                             <input type="radio" class="btn-check" name="memoryOptions" id="memory16gb" autocomplete="off" >
                             <label class="btn btn-outline-dark mx-1" for="memory16gb">16GB unified memory</label>
@@ -37,7 +37,7 @@
                     <div class="storage my-4">
                         <h6 class=fw-bold>Storage</h6>
                         <div class="d-flex">
-                            <input type="radio" class="btn-check" name="storageOptions" id="storage256gb" autocomplete="off" checked>
+                            <input type="radio" class="btn-check" name="storageOptions" id="storage256gb" autocomplete="off" >
                             <label class="btn btn-outline-dark mx-1" for="storage256gb">256GB SSD Storage</label>
                             <input type="radio" class="btn-check" name="storageOptions" id="storage512gb" autocomplete="off" >
                             <label class="btn btn-outline-dark mx-1" for="storage512gb">512GB SSD Storage</label>
@@ -50,7 +50,7 @@
                     <div class="deliveryOption my-4">
                         <h6 class=fw-bold>Choose your delivery option</h6>
                         <div class="d-flex">
-                            <input type="radio" class="btn-check" name="deliveryOption" id="normalDelivery" autocomplete="off" checked>
+                            <input type="radio" class="btn-check" name="deliveryOption" id="normalDelivery" autocomplete="off" >
                             <label class="btn btn-outline-dark mx-1" for="normalDelivery">Friday, Aug 25 FREE Prime Delivery</label>
                             <input type="radio" class="btn-check" name="deliveryOption" id="fastDelivery" autocomplete="off" >
                             <label class="btn btn-outline-dark mx-1" for="fastDelivery">Friday, Aug 21 Delivery change $20</label>
@@ -96,7 +96,7 @@
                 <div class="promoCode col-lg-6">
                     <h6>Add Promo Code</h6>
                     <div class="input-group">
-                        <input type="text" value="" id="promoCode" class="form-control">
+                        <input placeholder="stevekaku" type="text" value="" id="promoCode" class="form-control">
                         <input class="btn btn-danger" type="submit" name="" id="applyPromoCode" class="form-control" value="Apply">
                     </div>
                 </div>

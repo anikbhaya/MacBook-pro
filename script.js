@@ -1,8 +1,8 @@
 const basePrice = document.getElementById('basePrice');
 const basePriceValue = 1299;
-const memoryCost = document.getElementById('memoryCost');
-const storageCost = document.getElementById('storageCost');
-const deliveryCharge = document.getElementById('deliveryCharge');
+const memoryPart = document.getElementById('memoryCost');
+const storagePart = document.getElementById('storageCost');
+const deliveryOption = document.getElementById('deliveryCharge');
 
 const productTotalPrice = document.getElementById('productTotalPrice');
 const totalPrice = document.getElementById('totalPrice');
@@ -24,14 +24,14 @@ const fastDeliveryCharge = 20;
 
 let discountApplied;
 
-// Set Memory Price
+// Update Parts Price
 function setPartsCost(variation, partsName){
     partsName.innerText = variation
 }
 
 // Update Total Price
 function updateTotalPrice(){
-    productTotalPriceAmount = parseInt(basePrice.innerText) + parseInt(memoryCost.innerText) + parseInt(storageCost.innerText) + parseInt(deliveryCharge.innerText)
+    productTotalPriceAmount = parseInt(basePrice.innerText) + parseInt(memoryPart.innerText) + parseInt(storagePart.innerText) + parseInt(deliveryOption.innerText)
 
     productTotalPrice.innerText = productTotalPriceAmount;
 
@@ -51,31 +51,31 @@ function discountUpdate(){
 
 // Memory Cost
 document.getElementById('memory8gb').addEventListener('click', function(){
-    setPartsCost(memory8gbPrice, memoryCost)
+    setPartsCost(memory8gbPrice, memoryPart)
 })
 
 document.getElementById('memory16gb').addEventListener('click', function(){
-    setPartsCost(memory16gbPrice, memoryCost)
+    setPartsCost(memory16gbPrice, memoryPart)
 })
 
 // Storage Cost
 document.getElementById('storage256gb').addEventListener('click', function(){
-    setPartsCost(storage256gbPrice, storageCost)
+    setPartsCost(storage256gbPrice, storagePart)
 })
 document.getElementById('storage512gb').addEventListener('click', function(){
-    setPartsCost(storage512gbPrice, storageCost)
+    setPartsCost(storage512gbPrice, storagePart)
 })
 document.getElementById('storage1tb').addEventListener('click', function(){
-    setPartsCost(storage1tbPrice, storageCost)
+    setPartsCost(storage1tbPrice, storagePart)
 })
 
 // Delivery Cost
 document.getElementById('normalDelivery').addEventListener('click', function(){
-    setPartsCost(normalDeliveryCharge, deliveryCharge)
+    setPartsCost(normalDeliveryCharge, deliveryOption)
 })
 
 document.getElementById('fastDelivery').addEventListener('click', function(){
-    setPartsCost(fastDeliveryCharge, deliveryCharge)
+    setPartsCost(fastDeliveryCharge, deliveryOption)
 })
 
 //Update Product Total Price on Load
